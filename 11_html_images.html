@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
+        body {
             background-image: url('/images/img1.png');
+        }
+
+        p {
+            background-image: url('img_girl.jpg');
+        }
+
+        body {
+            background-image: url('img_girl.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
         }
     </style>
 </head>
+
 <body>
     <h1>HTML Images</h1>
     <img src="/images/Cat03.jpg" alt="image 1" width="50" height="60">
@@ -18,5 +31,41 @@
         <img src="/images/img1.png" alt="nothing" srcset="">
     </picture>
 
+    <!-- image map  -->
+    <img src="workplace.jpg" alt="Workplace" usemap="#workmap">
+
+    <map name="workmap">
+        <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+        <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+        <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+    </map>
+
+    <map name="workmap">
+        <area shape="circle" coords="337,300,44" href="coffee.htm" onclick="myFunction()">
+    </map>
+
+    <!-- background-image -->
+    <p style="background-image: url('img_girl.jpg');">
+
+        <!-- Picture element -->
+        The HTML <picture> Element
+        The HTML <picture> element gives web developers more flexibility in specifying image resources.
+T       The <picture> element contains one or more
+        <source> elements, each referring to different images through the srcset attribute. This way the
+        browser can choose the image that best fits the current view and/or device.
+        Each <source> element has a media attribute that defines when the image is the most suitable.
+        <picture>
+            <source media="(min-width: 650px)" srcset="img_food.jpg">
+            <source media="(min-width: 465px)" srcset="img_car.jpg">
+            <img src="img_girl.jpg">
+          </picture>
+          
+                    <script>
+                        function myFunction() {
+                            alert("You clicked the coffee cup!");
+                        }
+                    </script>
+
 </body>
+
 </html>
