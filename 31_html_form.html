@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    An HTML form is used to collect user input. The user input is most often sent to a server for processing.
+    The <form> </form>Element
+    The HTML form element is used to create an HTML form for user input.
+    The form element is a container for different types of input elements, such as: text fields, checkboxes, radio buttons, submit buttons.
+    <!--  -->
+    The <input> Element
+    The HTML <input> element is the most used form element.
+    An <input> element can be displayed in many ways, depending on the type attribute.
+
+    Type	Description
+<input type="text">	Displays a single-line text input field
+<input type="radio">	Displays a radio button (for selecting one of many choices)
+<input type="checkbox">	Displays a checkbox (for selecting zero or more of many choices)
+<input type="submit">	Displays a submit button (for submitting the form)
+<input type="button">	Displays a clickable button
+<!--  -->
+
+Text Fields
+The <input type="text"> defines a single-line input field for text input.
+<form>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname">
+  </form>
+  The for attribute of the <label> tag should be equal to the id attribute of the <input> element to bind them together.
+    <!--  -->
+
+Radio Buttons
+The <input type="radio"> defines a radio button.
+Radio buttons let a user select ONE of a limited number of choices.
+<!--  -->
+
+Checkboxes
+The <input type="checkbox"> defines a checkbox.
+Checkboxes let a user select ZERO or MORE options of a limited number of choices.
+<!--  -->
+
+The Submit Button
+The <input type="submit"> defines a button for submitting the form data to a form-handler.
+The form-handler is typically a file on the server with a script for processing input data.
+The form-handler is specified in the form's action attribute.
+<!--  -->
+
+</body>
+</html>
