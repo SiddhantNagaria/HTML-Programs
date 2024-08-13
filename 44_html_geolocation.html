@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Locate the User's Position
+    The HTML Geolocation API is used to get the geographical position of a user.
+    Since this can compromise privacy, the position is not available unless the user approves it.
+    <!--  -->
+
+    Using HTML Geolocation
+    The getCurrentPosition() method is used to return the user's position.
+    <script>
+        const x = document.getElementById("demo");
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+        function showPosition(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+        }
+    </script>
+    <!--  -->
+      
+    Geolocation Object - Other interesting Methods
+    The Geolocation object also has other interesting methods:
+    watchPosition() - Returns the current position of the user and continues to return updated position as the user
+    moves (like the GPS in a car).
+    clearWatch() - Stops the watchPosition() method.
+    <!--  -->
+</body>
+
+</html>
